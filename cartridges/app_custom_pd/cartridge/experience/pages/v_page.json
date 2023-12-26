@@ -1,0 +1,10 @@
+{
+    "name":"Storefront V-Page",
+    "description":"A Storefront Page Type",
+    "region_definitions":[
+      {
+        "id":"heroslider",
+        "name":"Hero Slider"
+      }
+    ]
+}
