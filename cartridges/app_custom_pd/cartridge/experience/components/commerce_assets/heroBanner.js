@@ -17,7 +17,8 @@ module.exports.render = function (context, modelIn) {
     var model = modelIn || new HashMap();
     var content = context.content;
 
-    model.heading = content.heading;
+    model.title = content.title;
+    model.shortDescription = content.shortDescription;
     model.image = ImageTransformation.getScaledImage(content.image);
     model.categoryLink = URLUtils.url('Search-Show', 'cgid', content.categoryLink.getID()).toString();
 

@@ -4,15 +4,16 @@
     <isscript>
         var assets = require('*/cartridge/scripts/assets.js');
         assets.addCss('/css/experience/storePage.css');
+          assets.addCss('/css/experience/v_page.css');
     </isscript>
 
     <div class="storepage" id="${pdict.page.ID}">
-        <div class="container">
-            <div class="row" >
-                <isprint value="${pdict.regions.heroslider.setClassName("col-12").render()}" encoding="off" />
+        <div class="container-fluid">
+            <div class="row">
+                <isprint value="${pdict.regions.heroslider.setClassName(" col-12 hero-slider").render()}" encoding="off" />
             </div>
-              <div class="row">
-                <isprint value="${pdict.regions.main.setClassName("col-12").render()}" encoding="off" />
+            <div class="row">
+                <isprint value="${pdict.regions.main.setClassName(" col-12").render()}" encoding="off" />
             </div>
         </div>
     </div>

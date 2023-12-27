@@ -1,7 +1,12 @@
 <isscript>
     var assets = require('*/cartridge/scripts/assets.js');
     assets.addCss('/css/experience/components/commerceAssets/imageAndTextCommon.css');
+     assets.addCss('/css/experience/components/commerceAssets/customImageAndTextCommon.css');
+   
 </isscript>
+<style>
+
+</style>
 
 <div class="mainbanner-container">
     <a href="${pdict.categoryLink}">
@@ -18,16 +23,19 @@
                             <isif condition="${pdict.image.alt}">alt="${pdict.image.alt}" title="${pdict.image.alt}"</isif>
                         />
                     </picture>
-                    <figcaption class="image-heading-container">
-                        <div class="row image-heading-text">
+                    <figcaption class="image-heading-container h-100 d-flex flex-column justify-content-between p-0 py-4 align-items-center">
+                        <div class="row image-heading-text ">
                             <div class="col-12 text-sm-left text-center">
-                                <span>
-                                    <isprint value="${pdict.heading}" encoding="off"/>
-                                </span>
+                                <h2>
+                                    <isprint value="${pdict.title}" encoding="off"/>
+                                </h2>
                             </div>
                         </div>
                         <div class="row mainbanner-sub-text">
-                            <div class="col-12 text-sm-left text-center">
+                            <div class="col-12  text-center text-white">
+                                <isprint value="${pdict.shortDescription}" encoding="off"/>
+                            </div>
+                            <div class="col-12  text-center">
                                 <p class="link-large">${Resource.msg('pd.main.banner.shop.now','pageDesigner',null)}</p>
                             </div>
                         </div>
