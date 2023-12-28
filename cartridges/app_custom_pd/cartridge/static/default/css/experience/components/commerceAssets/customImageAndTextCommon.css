@@ -13,8 +13,8 @@
   border-radius: 0.2rem;
   border: 1px solid black;
   white-space: nowrap;
-  -webkit-transition: all 0.3s ease, color 0.3s ease;
-  transition: all 0.3s ease, color 0.3s ease;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .image-heading-container .mainbanner-sub-text p:hover {

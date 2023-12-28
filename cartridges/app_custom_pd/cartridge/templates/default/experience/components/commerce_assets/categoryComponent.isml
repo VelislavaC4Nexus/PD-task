@@ -57,7 +57,7 @@
 </div>
 
 <div class="text-center cta-link ${pdict.category.ctaPosition == 'bottom' ? 'bottom' : 'top'}">
-     <a href="${pdict.category.url}"
-        class="popular-category-label-a popular-cat-link">${pdict.category.ctaTitle} </a><i class="fa fa-arrow-right"></i>
+    <a href="${pdict.category.url}" class="popular-category-label-a popular-cat-link">${pdict.category.ctaTitle} </a><i
+        class="fa fa-arrow-right"></i>
 </div>
 </div>

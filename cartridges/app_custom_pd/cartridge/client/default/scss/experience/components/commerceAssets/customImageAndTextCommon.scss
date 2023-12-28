@@ -5,9 +5,6 @@
 .mainbanner-image {
     height: 300px;
 }
-.hero-banner-link{
-
-}
 
 .image-heading-container .mainbanner-sub-text p {
     text-decoration: none;
@@ -16,8 +13,9 @@
     border-radius: 0.2rem;
     border: 1px solid black;
     white-space: nowrap;
-    transition: all 0.3s ease, color 0.3s ease;
+    transition: all .3s ease-in-out;
 }
+
 .image-heading-container .mainbanner-sub-text p:hover{
     background-color: white;
     color: var(--skin-primary-color-1);
