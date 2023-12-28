@@ -1,0 +1,38 @@
+.tile-container {
+    position: relative;
+}
+
+.cta-link {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 0rem 0.4rem;
+    border-radius: 0.2rem;
+}
+
+.bottom {
+    margin-top: 1rem !important;
+    bottom: 0;
+}
+
+.cat-description {
+    position: absolute;
+    bottom:0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 0rem 0.5rem;
+    border-radius: 0.2rem;
+    font-size: 0.8rem;
+    
+}
+
+.top {
+    top: 0;
+}
+
+.image-cropper {
+    width: 100%;
+    border-radius: unset;
+}
