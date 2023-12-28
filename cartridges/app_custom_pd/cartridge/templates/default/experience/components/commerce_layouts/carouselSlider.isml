@@ -18,7 +18,7 @@
         ${pdict.displayIndicators.xs} ${pdict.displayIndicators.sm} ${pdict.displayIndicators.md}
         ${pdict.displayControls.xs} ${pdict.displayControls.sm} ${pdict.displayControls.md}
         ${pdict.insufficientNumberOfSlides.xs} ${pdict.insufficientNumberOfSlides.sm} ${pdict.insufficientNumberOfSlides.md}"
-     data-ride="carousel"
+     data-ride="false"
      data-interval="6000"
      data-number-of-slides="${pdict.numberOfSlides}"
      data-sm="${pdict.slidesToDisplay.sm}"

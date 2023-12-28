@@ -32,11 +32,11 @@
                             </div>
                         </div>
                         <div class="row mainbanner-sub-text">
-                            <div class="col-12  text-center text-white">
+                            <div class="col-12 text-center text-white">
                                 <isprint value="${pdict.shortDescription}" encoding="off"/>
                             </div>
-                            <div class="col-12  text-center">
-                                <p class="link-large">${Resource.msg('pd.main.banner.shop.now','pageDesigner',null)}</p>
+                            <div class="col-12 text-center p-0 hero-banner-link">
+                             <p class="link-large m-0 p-0"> ${pdict.ctaTitle}   <i class="fa fa-arrow-right"></i></p>
                             </div>
                         </div>
                     </figcaption>

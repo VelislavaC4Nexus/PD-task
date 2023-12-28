@@ -44,7 +44,7 @@ module.exports.render = function (context, modelIn) {
             content.image = null;
         }
         // catObj.categoryShortDescription = content.categoryShortDescription;
-        catObj.ctaTitle = content.ctaTitle;
+        catObj.ctaTitle = content.ctaTitleLink;
         catObj.ctaPosition = content.ctaPosition;
 
         catObj.url = cat.custom && 'alternativeUrl' in cat.custom && cat.custom.alternativeUrl

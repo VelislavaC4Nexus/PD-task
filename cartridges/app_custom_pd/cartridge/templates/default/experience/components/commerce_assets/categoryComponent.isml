@@ -44,8 +44,7 @@
                 </div>
                 <iselse>
                     <div class="image-wrapper" <isif condition="${pdict.category.imageURL}">
-                        style="background-image: url(${pdict.category.imageURL}); background-repeat: no-repeat;
-                        background-position: center center; background-size: cover;"
+                        style="background-image: url(${pdict.category.imageURL});"
             </isif>
             >
     </div>
@@ -53,11 +52,12 @@
     </a>
 </div>
 
-<div class="text-center my-1 cat-description">
-    <p class="cat-description">${pdict.category.description}</p>
+<div class="text-center cat-description ${pdict.category.ctaPosition == 'bottom' ? 'top' : 'bottom'} ">
+    <p class='m-0'>${pdict.category.description}</p>
 </div>
 
-<div class="text-center my-1 cta-link ${pdict.category.ctaPosition == 'bottom' ? 'bottom' : 'top'}">
-    <a href="${pdict.category.url}" class="popular-category-label-a popular-cat-link">${pdict.category.ctaTitle}</a>
+<div class="text-center cta-link ${pdict.category.ctaPosition == 'bottom' ? 'bottom' : 'top'}">
+     <a href="${pdict.category.url}"
+        class="popular-category-label-a popular-cat-link">${pdict.category.ctaTitle} </a><i class="fa fa-arrow-right"></i>
 </div>
 </div>

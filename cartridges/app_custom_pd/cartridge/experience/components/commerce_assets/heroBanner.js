@@ -18,6 +18,7 @@ module.exports.render = function (context, modelIn) {
     var content = context.content;
 
     model.title = content.title;
+    model.ctaTitle = content.ctaTitleLink;
     model.shortDescription = content.shortDescription;
     model.image = ImageTransformation.getScaledImage(content.image);
     model.categoryLink = URLUtils.url('Search-Show', 'cgid', content.categoryLink.getID()).toString();

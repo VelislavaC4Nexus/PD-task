@@ -29,8 +29,8 @@
                     "required": true
                 },
                 {
-                    "id": "ctaTitle",
-                    "name": "CTA Title",
+                    "id": "ctaTitleLink",
+                    "name": "CTA Title - link",
                     "description": "Title for the CTA.",
                     "type": "string",
                     "required": true

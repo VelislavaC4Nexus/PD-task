@@ -1,3 +1,9 @@
+.image-wrapper {
+    background-position: right;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 .tile-container {
     position: relative;
 }
@@ -9,30 +15,42 @@
     background-color: rgba(255, 255, 255, 0.5);
     padding: 0rem 0.4rem;
     border-radius: 0.2rem;
+    border: 1px solid black;
+    white-space: nowrap;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.cta-link a{
+    text-decoration: none;
+}
+
+.cta-link:hover{
+    background-color: white;
 }
 
 .bottom {
-    margin-top: 1rem !important;
-    bottom: 0;
+    bottom: 0.5rem;
 }
 
 .cat-description {
     position: absolute;
-    bottom:0.5rem;
     left: 50%;
     transform: translateX(-50%);
     background-color: rgba(255, 255, 255, 0.5);
     padding: 0rem 0.5rem;
     border-radius: 0.2rem;
-    font-size: 0.8rem;
-    white-space:nowrap ;
+    white-space: nowrap;
 }
 
 .top {
-    top: 0;
+    top:0.5rem;
 }
 
 .image-cropper {
     width: 100%;
+    height: 300px;
     border-radius: unset;
+}
+.fa {
+    margin-left: 0.5rem;
+    color: var(--skin-primary-color-1);
 }
