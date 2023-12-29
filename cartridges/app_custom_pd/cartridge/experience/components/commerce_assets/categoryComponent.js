@@ -23,6 +23,12 @@ module.exports.render = function (context, modelIn) {
         catObj.ID = cat.ID;
         catObj.compID = context.component.ID;
 
+        if (content.catDisplayName) {
+            catObj.name = content.catDisplayName;
+        } else {
+            catObj.name = cat.displayName;
+        }
+
         if (content.categoryShortDescription) {
             catObj.description = content.categoryShortDescription;
         } else {

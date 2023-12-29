@@ -52,7 +52,8 @@
     </a>
 </div>
 
-<div class="text-center cat-description ${pdict.category.ctaPosition == 'bottom' ? 'top' : 'bottom'} ">
+<div class="text-center cat-description ${pdict.category.ctaPosition == 'bottom' ? 'top' : 'bottom'}">
+    <h3 class='m-0'>${pdict.category.name}</h3>
     <p class='m-0'>${pdict.category.description}</p>
 </div>
 

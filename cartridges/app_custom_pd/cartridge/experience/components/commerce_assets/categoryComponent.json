@@ -16,6 +16,13 @@
                     "required": true
                 },
                 {
+                    "id": "catDisplayName",
+                    "name": "Custom Display Name",
+                    "description": "Overwrite the category name if needed.",
+                    "type": "string",
+                    "required": false
+                },
+                {
                     "id": "image",
                     "name": "Image",
                     "type": "image",
