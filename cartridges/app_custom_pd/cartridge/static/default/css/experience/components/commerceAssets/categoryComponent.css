@@ -16,7 +16,7 @@
   background-color: rgba(255, 255, 255, 0.5);
   padding: 0rem 0.4rem;
   border-radius: 0.2rem;
-  border: 1px solid black;
+  border: 1px solid #000;
   white-space: nowrap;
   -webkit-transition: background-color 0.3s ease, color 0.3s ease;
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -27,7 +27,7 @@
 }
 
 .cta-link:hover {
-  background-color: white;
+  background-color: #fff;
 }
 
 .bottom {
@@ -51,7 +51,7 @@
 
 .image-cropper {
   width: 100%;
-  height: 300px;
+  height: 18.75rem;
   border-radius: unset;
 }
 
