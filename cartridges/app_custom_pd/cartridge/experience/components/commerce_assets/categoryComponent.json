@@ -16,7 +16,7 @@
                     "required": true
                 },
                 {
-                    "id": "catDisplayName",
+                    "id": "categoryDisplayName",
                     "name": "Custom Display Name",
                     "description": "Overwrite the category name if needed.",
                     "type": "string",

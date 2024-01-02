@@ -4,9 +4,6 @@
      assets.addCss('/css/experience/components/commerceAssets/customImageAndTextCommon.css');
    
 </isscript>
-<style>
-
-</style>
 
 <div class="mainbanner-container">
     <a href="${pdict.categoryLink}">
@@ -37,7 +34,7 @@
                                 <isprint value="${pdict.shortDescription}" encoding="off" />
                             </div>
                             <div class="col-12 text-center p-0 hero-banner-link">
-                                <p class="link-large m-0 p-0"> ${pdict.ctaTitle} <i class="fa fa-arrow-right"></i></p>
+                                <p class="link-large m-0 p-0">${pdict.ctaTitle} <i class="fa fa-arrow-right"></i></p>
                             </div>
                         </div>
                     </figcaption>

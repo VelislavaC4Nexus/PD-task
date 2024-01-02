@@ -5,6 +5,7 @@ var Template = require('dw/util/Template');
 var HashMap = require('dw/util/HashMap');
 var URLUtils = require('dw/web/URLUtils');
 var ImageTransformation = require('*/cartridge/experience/utilities/ImageTransformation.js');
+var pageCacheUtils = require('*/cartridge/experience/utils/pageCacheUtils');
 
 /**
  * Render logic for the storefront.popularCategories.
@@ -23,8 +24,8 @@ module.exports.render = function (context, modelIn) {
         catObj.ID = cat.ID;
         catObj.compID = context.component.ID;
 
-        if (content.catDisplayName) {
-            catObj.name = content.catDisplayName;
+        if (content.categoryDisplayName) {
+            catObj.name = content.categoryDisplayName;
         } else {
             catObj.name = cat.displayName;
         }
@@ -61,9 +62,7 @@ module.exports.render = function (context, modelIn) {
     model.category = catObj;
 
     // instruct 24 hours relative pagecache
-    var expires = new Date();
-    expires.setDate(expires.getDate() + 1); // this handles overflow automatically
-    response.setExpires(expires);
+    pageCacheUtils.setCacheExpiry(response);
 
     return new Template('experience/components/commerce_assets/categoryComponent').render(model).text;
 };

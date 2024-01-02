@@ -1,9 +1,11 @@
+@import "~base/variables";
+
 .image-heading-container {
     top: 0%
 }
 
 .mainbanner-image {
-    height: 300px;
+    height: 18.75rem;
 }
 
 .image-heading-container .mainbanner-sub-text p {
@@ -11,13 +13,13 @@
     background-color: rgba(255, 255, 255, 0.5);
     padding: 0rem 0.4rem;
     border-radius: 0.2rem;
-    border: 1px solid black;
+    border: 1px solid $black;
     white-space: nowrap;
     transition: all .3s ease-in-out;
 }
 
 .image-heading-container .mainbanner-sub-text p:hover{
-    background-color: white;
+    background-color: $white;
     color: var(--skin-primary-color-1);
 }
 

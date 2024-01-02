@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 var server = require("server");
 server.extend(module.superModule);
@@ -12,13 +12,13 @@ server.append("Show", function (req, res, next) {
 
     pageMetaHelper.setPageMetaTags(req.pageMetaData, Site.current);
 
-    var pdCustomPreferenceValue = Site.getCurrent().getCustomPreferenceValue("PDTaskConfig");
-    if(pdCustomPreferenceValue){
-        var page = PageMgr.getPage(pdCustomPreferenceValue);
+    var pdHomepage = Site.getCurrent().getCustomPreferenceValue("PDTaskConfig");
+    if(pdHomepage){
+        var page = PageMgr.getPage(pdHomepage);
     }
 
     if (page && page.isVisible()) {
-        res.page(pdCustomPreferenceValue);
+        res.page(pdHomepage);
     } else {
         res.render("home/homePage");
     }

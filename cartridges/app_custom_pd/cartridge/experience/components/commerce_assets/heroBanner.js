@@ -5,6 +5,7 @@ var Template = require('dw/util/Template');
 var HashMap = require('dw/util/HashMap');
 var URLUtils = require('dw/web/URLUtils');
 var ImageTransformation = require('*/cartridge/experience/utilities/ImageTransformation.js');
+var pageCacheUtils = require('*/cartridge/experience/utils/pageCacheUtils');
 
 /**
  * Render logic for the storefront.MainBanner component
@@ -24,9 +25,7 @@ module.exports.render = function (context, modelIn) {
     model.categoryLink = URLUtils.url('Search-Show', 'cgid', content.categoryLink.getID()).toString();
 
     // instruct 24 hours relative pagecache
-    var expires = new Date();
-    expires.setDate(expires.getDate() + 1); // this handles overflow automatically
-    response.setExpires(expires);
+    pageCacheUtils.setCacheExpiry(response);
 
     return new Template('experience/components/commerce_assets/heroBanner').render(model).text;
 };
