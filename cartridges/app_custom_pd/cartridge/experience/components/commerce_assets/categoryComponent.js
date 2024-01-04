@@ -29,7 +29,10 @@ module.exports.render = function (context, modelIn) {
         } else {
             catObj.name = cat.displayName;
         }
-
+        
+        if (content.categoryCustomImageUrl) {
+            catObj.customImageUrl = content.categoryCustomImageUrl;
+        } 
         if (content.categoryShortDescription) {
             catObj.description = content.categoryShortDescription;
         } else {
@@ -39,17 +42,7 @@ module.exports.render = function (context, modelIn) {
         if (cat.custom.slotBannerImage) {
             catObj.imageURL = cat.custom.slotBannerImage.getURL().toString();
         }
-
-        if (cat.image) {
-            catObj.imageURL = cat.image.getURL().toString();
-        }
-
-        if (content.image) {
-            model.image = ImageTransformation.getScaledImage(content.image);
-            catObj.imageURL = null;
-        } else {
-            content.image = null;
-        }
+    
         // catObj.categoryShortDescription = content.categoryShortDescription;
         catObj.ctaTitle = content.ctaTitleLink;
         catObj.ctaPosition = content.ctaPosition;
@@ -60,6 +53,7 @@ module.exports.render = function (context, modelIn) {
     }
 
     model.category = catObj;
+    var sth = model
 
     // instruct 24 hours relative pagecache
     pageCacheUtils.setCacheExpiry(response);

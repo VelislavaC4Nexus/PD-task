@@ -7,57 +7,29 @@
 <div class="mt-2 tile-container">
     <div class="image-cropper">
         <a href="${pdict.category.url}">
-            <isif condition="${pdict.image}">
-                <style>
-                    .image-wrapper-$ {
-                        pdict.category.compID
-                    }
-
-                    span {
-                        background-image: url('${pdict.image.src.mobile}');
-                        
-                    }
-
-                    @media (min-width: 768px) {
-                        .image-wrapper-$ {
-                            pdict.category.compID
-                        }
-
-                        span {
-                            background-image: url('${pdict.image.src.tablet}');
-                        }
-                    }
-
-                    @media (min-width: 992px) {
-                        .image-wrapper-$ {
-                            pdict.category.compID
-                        }
-
-                        span {
-                            background-image: url('${pdict.image.src.desktop}');
-                        }
-                    }
-                </style>
-                <div class="image-wrapper-${pdict.category.compID} image-wrapper">
-                    <span class="background-image" role="img" aria-label="${pdict.category.description}"> </span>
-                </div>
+            <isif condition="${pdict.category.customImageUrl}">
+                <picture>
+                    <img class="image-wrapper-${pdict.category.compID} image-wrapper image-fluid common-image-component common-image-filter category-img"
+                        src="${pdict.category.customImageUrl}" alt="${}" />
+                </picture>
                 <iselse>
-                    <div class="image-wrapper" <isif condition="${pdict.category.imageURL}">
-                        style="background-image: url(${pdict.category.imageURL});"
+                    <isif condition="${pdict.category.imageURL}">
+                        <picture>
+                            <img class="image-wrapper-${pdict.category.compID} image-wrapper image-fluid common-image-component common-image-filter category-img"
+                                src="${pdict.category.imageURL}" alt="${}" />
+                        </picture>
+                    </isif>
             </isif>
-            >
+        </a>
     </div>
-    </isif>
-    </a>
-</div>
 
-<div class="text-center cat-description ${pdict.category.ctaPosition == 'bottom' ? 'top' : 'bottom'}">
-    <h3 class='m-0'>${pdict.category.name}</h3>
-    <p class='m-0'>${pdict.category.description}</p>
-</div>
+    <div class="text-center cat-description ${pdict.category.ctaPosition == 'bottom' ? 'top' : 'bottom'}">
+        <h3 class='m-0'>${pdict.category.name}</h3>
+        <p class='m-0'>${pdict.category.description}</p>
+    </div>
 
-<div class="text-center cta-link ${pdict.category.ctaPosition == 'bottom' ? 'bottom' : 'top'}">
-    <a href="${pdict.category.url}" class="popular-category-label-a popular-cat-link">${pdict.category.ctaTitle} </a><i
-        class="fa fa-arrow-right"></i>
-</div>
+    <div class="text-center cta-link ${pdict.category.ctaPosition == 'bottom' ? 'bottom' : 'top'}">
+        <a href="${pdict.category.url}" class="popular-category-label-a popular-cat-link">${pdict.category.ctaTitle}
+        </a><i class="fa fa-arrow-right"></i>
+    </div>
 </div>

@@ -1,9 +1,7 @@
 @import "~base/variables";
 
-.image-wrapper {
-    background-position: right;
-    background-size: cover;
-    background-repeat: no-repeat;
+.category-img{
+    object-fit: fill;
 }
 
 .tile-container {
@@ -57,4 +55,14 @@
 .fa {
     margin-left: 0.5rem;
     color: var(--skin-primary-color-1);
+}
+
+@media (max-width: 992px) {
+    .image-cropper {
+        height: 8rem;
+    }
+
+    .category-img{
+        object-fit: cover;
+    }
 }

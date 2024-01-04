@@ -23,9 +23,9 @@
                     "required": false
                 },
                 {
-                    "id": "image",
-                    "name": "Image",
-                    "type": "image",
+                    "id": "categoryCustomImageUrl",
+                    "name": "Category Custom Image URL",
+                    "type": "string",
                     "required": false
                 },
                 {
