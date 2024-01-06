@@ -12,13 +12,13 @@ server.append("Show", function (req, res, next) {
 
     pageMetaHelper.setPageMetaTags(req.pageMetaData, Site.current);
 
-    var pdHomepage = Site.getCurrent().getCustomPreferenceValue("PDTaskConfig");
-    if(pdHomepage){
-        var page = PageMgr.getPage(pdHomepage);
+    var customHomepage = Site.getCurrent().getCustomPreferenceValue("PDTaskConfig");
+    if(customHomepage){
+        var page = PageMgr.getPage(customHomepage);
     }
 
     if (page && page.isVisible()) {
-        res.page(pdHomepage);
+        res.page(customHomepage);
     } else {
         res.render("home/homePage");
     }

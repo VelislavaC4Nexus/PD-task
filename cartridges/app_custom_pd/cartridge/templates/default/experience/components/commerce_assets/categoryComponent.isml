@@ -3,6 +3,7 @@
     assets.addCss('/css/experience/components/commerceAssets/popularCategory.css');
     assets.addCss('/css/experience/components/commerceAssets/categoryComponent.css');
 </isscript>
+
 <div class="mt-2 tile-container">
     <div class="image-cropper">
         <a href="${pdict.category.url}">

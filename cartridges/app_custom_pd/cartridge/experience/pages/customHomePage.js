@@ -31,8 +31,5 @@ module.exports.render = function (context, modelIn) {
 
     model.CurrentPageMetaData = PageRenderHelper.getPageMetaData(page);
 
-	// no pagecache setting here, this is dynamically determined by the components used within the page
-
-    // render the page
-    return new Template('experience/pages/v_page').render(model).text;
+    return new Template('experience/pages/customHomePage').render(model).text;
 };
