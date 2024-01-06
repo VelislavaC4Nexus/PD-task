@@ -4,6 +4,7 @@
 var Template = require('dw/util/Template');
 var HashMap = require('dw/util/HashMap');
 var PageRenderHelper = require('*/cartridge/experience/utilities/PageRenderHelper.js');
+var pageCacheUtils = require('*/cartridge/experience/utils/pageCacheUtils');
 
 /**
  * Render logic for the storefront.3 Row x 1 Col (Mobile) 1 Row x 3 Col (Desktop) layout
@@ -19,9 +20,7 @@ module.exports.render = function (context, modelIn) {
     model.regions = PageRenderHelper.getRegionModelRegistry(component);
 
     // instruct 24 hours relative pagecache
-    var expires = new Date();
-    expires.setDate(expires.getDate() + 1); // this handles overflow automatically
-    response.setExpires(expires);
+    pageCacheUtils.setCacheExpiry(response);
 
     return new Template('experience/components/commerce_layouts/categoryLayoutGrid1row3col').render(model).text;
 };

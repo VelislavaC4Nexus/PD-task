@@ -9,10 +9,11 @@
         <a href="${pdict.category.url}">
             <isif condition="${pdict.category.customImageUrl}">
                 <picture>
-                    <img class="image-wrapper-${pdict.category.compID} image-wrapper image-fluid common-image-component common-image-filter category-img"
-                        src="${pdict.category.customImageUrl}" alt="${}" />
-                </picture>
-                <iselse>
+                            <img class="image-wrapper-${pdict.category.compID} image-wrapper image-fluid common-image-component common-image-filter category-img"
+                                src="${pdict.category.customImageUrl}" alt="${}" />
+                 </picture>
+              
+            <iselse>
                     <isif condition="${pdict.category.imageURL}">
                         <picture>
                             <img class="image-wrapper-${pdict.category.compID} image-wrapper image-fluid common-image-component common-image-filter category-img"
