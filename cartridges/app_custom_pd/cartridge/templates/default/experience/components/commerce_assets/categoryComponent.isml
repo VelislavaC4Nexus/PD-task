@@ -3,23 +3,17 @@
     assets.addCss('/css/experience/components/commerceAssets/popularCategory.css');
     assets.addCss('/css/experience/components/commerceAssets/categoryComponent.css');
 </isscript>
-
 <div class="mt-2 tile-container">
     <div class="image-cropper">
         <a href="${pdict.category.url}">
             <isif condition="${pdict.category.customImageUrl}">
-                <picture>
-                            <img class="image-wrapper-${pdict.category.compID} image-wrapper image-fluid common-image-component common-image-filter category-img"
-                                src="${pdict.category.customImageUrl}" alt="${}" />
-                 </picture>
-              
+                <img class="image-wrapper-${pdict.category.compID} image-wrapper image-fluid common-image-component common-image-filter category-img"
+                                src="${pdict.category.customImageUrl}" alt="${pdict.category.name}" />
             <iselse>
-                    <isif condition="${pdict.category.imageURL}">
-                        <picture>
-                            <img class="image-wrapper-${pdict.category.compID} image-wrapper image-fluid common-image-component common-image-filter category-img"
+                <isif condition="${pdict.category.imageURL}">
+                    <img class="image-wrapper-${pdict.category.compID} image-wrapper image-fluid common-image-component common-image-filter category-img"
                                 src="${pdict.category.imageURL}" alt="${}" />
-                        </picture>
-                    </isif>
+                </isif>
             </isif>
         </a>
     </div>
