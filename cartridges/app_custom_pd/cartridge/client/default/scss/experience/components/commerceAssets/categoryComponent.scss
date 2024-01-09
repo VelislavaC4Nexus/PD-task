@@ -1,0 +1,63 @@
+@import "~base/variables";
+
+.category-img {
+    object-fit: fill;
+}
+
+.tile-container {
+    position: relative;
+}
+
+.cat-description {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.5);
+    white-space: nowrap;
+    border-radius: 0.2rem;
+    padding: 0rem 0.5rem;
+}
+
+.cta-link {
+    @extend .cat-description;
+
+    border: 1px solid $black;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cta-link a {
+    text-decoration: none;
+}
+
+.cta-link:hover {
+    background-color: $white;
+}
+
+.bottom {
+    bottom: 0.5rem;
+}
+
+.top {
+    top: 0.5rem;
+}
+
+.image-cropper {
+    width: 100%;
+    height: 18.75rem;
+    border-radius: unset;
+}
+
+.fa {
+    margin-left: 0.5rem;
+    color: var(--skin-primary-color-1);
+}
+
+@media (max-width: 992px) {
+    .image-cropper {
+        height: 8rem;
+    }
+
+    .category-img {
+        object-fit: cover;
+    }
+}
