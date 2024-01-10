@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns="http://www.demandware.com/xml/impex/library/2006-10-31" library-id="RefArchSharedLibrary">
+
+    <content content-id="customhomepage">
+        <display-name xml:lang="x-default">customHomePage</display-name>
+        <type>page.customHomePage</type>
+        <config>{"visibility" : [ ]}</config>
+        <visibility-mode xml:lang="x-default">visible</visibility-mode>
+        <data xml:lang="x-default">{ }</data>
+        <online-flag>false</online-flag>
+        <online-flag site-id="RefArch">true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <searchable-flag site-id="RefArch">false</searchable-flag>
+        <page-attributes/>
+        <content-links>
+            <content-link content-id="4a47a7675dff7cce2b95089494" type="page.customHomePage.heroslider">
+                <position>0.0</position>
+            </content-link>
+            <content-link content-id="913bafbc58ca81652092ac7826" type="page.customHomePage.main">
+                <position>1.0</position>
+            </content-link>
+            <content-link content-id="00d30bf5b18ee6f195f844d20d" type="page.customHomePage.main">
+                <position>0.0</position>
+            </content-link>
+        </content-links>
+        <sitemap-included-flag site-id="RefArch">false</sitemap-included-flag>
+    </content>
+</library>

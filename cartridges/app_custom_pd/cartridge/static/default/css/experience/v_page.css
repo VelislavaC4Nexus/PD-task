@@ -1,0 +1,12 @@
+.hero-slider {
+  padding: unset;
+}
+.hero-slider .carousel-item {
+  padding: 0 !important;
+}
+.hero-slider .carousel-control-prev {
+  left: 1rem;
+}
+.hero-slider .carousel-control-next {
+  right: 1rem;
+}

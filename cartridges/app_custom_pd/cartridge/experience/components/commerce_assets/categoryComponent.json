@@ -1,0 +1,57 @@
+{
+    "name": "Custom Category Component",
+    "description": "A custom category component with specific settings.",
+    "group": "commerce_assets",
+    "attribute_definition_groups": [
+        {
+            "id": "customCategoryComponent",
+            "name": "Custom Category Component",
+            "description": "Settings for the custom category component.",
+            "attribute_definitions": [
+                {
+                    "id": "category",
+                    "name": "Category",
+                    "description": "Select Category to be displayed.",
+                    "type": "category",
+                    "required": true
+                },
+                {
+                    "id": "categoryDisplayName",
+                    "name": "Custom Display Name",
+                    "description": "Overwrite the category name if needed.",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "categoryCustomImageUrl",
+                    "name": "Category Custom Image URL",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "categoryShortDescription",
+                    "name": "Category Short Description",
+                    "description": "Short description for the displayed category.",
+                    "type": "string",
+                    "required": true
+                },
+                {
+                    "id": "ctaTitleLink",
+                    "name": "CTA Title - link",
+                    "description": "Title for the CTA.",
+                    "type": "string",
+                    "required": true
+                },
+                {
+                    "id": "ctaPosition",
+                    "name": "CTA Position",
+                    "description": "Position of the CTA.",
+                    "type": "enum",
+                    "values": ["top", "bottom"],
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "region_definitions": []
+}
